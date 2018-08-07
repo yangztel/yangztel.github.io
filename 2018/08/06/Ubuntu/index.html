@@ -17,6 +17,8 @@
 
 
 
+  <meta name="description" content="Ubuntu"/>
+
 
 
 
@@ -36,7 +38,7 @@
 
 
 
-<link rel="canonical" href="http://yoursite.com/archives/2018/08/"/>
+<link rel="canonical" href="http://yoursite.com/2018/08/06/Ubuntu/"/>
 
 
 
@@ -79,11 +81,7 @@
   window.config = {"title":"Hexo","subtitle":null,"description":null,"author":"yangzteL","language":null,"timezone":null,"url":"http://yoursite.com","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null,"first_line_number":"always1"},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":"even","deploy":{"type":"git","repo":"https://gitee.com/yangztel/blog.git","branch":"master"},"ignore":[],"keywords":null,"index_generator":{"per_page":10,"order_by":"-date","path":""},"jsonContent":{"meta":false,"pages":false,"posts":{"title":true,"date":true,"path":true,"text":false,"raw":false,"content":false,"slug":false,"updated":false,"comments":false,"link":false,"permalink":false,"excerpt":false,"categories":false,"tags":true}},"category_generator":{"per_page":10},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"tag_generator":{"per_page":10},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true}};
 </script>
 
-    <title>
-  
-    归档 - Hexo
-  
-</title>
+    <title> Ubuntu - Hexo </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -119,111 +117,135 @@
           <div id="content" class="content">
             
   
-  <section id="archive" class="archive">
-    
-      
-        <div class="archive-title">
-          <span class="archive-post-counter">
-            目前共计 4 篇日志
-          </span>
-        </div>
-      
-    
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Ubuntu
+        
+      </h1>
 
-    
-      
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h2 class="archive-year">2018</h2>
-          </div>
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            08-06
-          
+      <div class="post-meta">
+        <span class="post-time">
+          2018-08-06
         </span>
-        <span class="archive-post-title">
-          <a href="/2018/08/06/Ubuntu/" class="archive-post-link">
-            Ubuntu
-          </a>
-        </span>
+        
+        
       </div>
+    </header>
+
+    
+    
+
+
+    <div class="post-content">
+      
+        <p>Ubuntu<br><a id="more"></a></p>
+<ul>
+<li>打开软件<blockquote>
+<p>~/software/android-studio/bin$ ./studio.sh</p>
+</blockquote>
+</li>
+<li>常用快捷键</li>
+</ul>
+<h1 id="添加软件快捷键-sh"><a href="#添加软件快捷键-sh" class="headerlink" title="添加软件快捷键(.sh)"></a>添加软件快捷键(.sh)</h1><ul>
+<li>以创建AndroidStudio快捷方式为例</li>
+<li>进入:/usr/share/application</li>
+<li>新建 androidstudio.desktop 文件<blockquote>
+<p> vim androidstudio.desktop</p>
+</blockquote>
+</li>
+<li>需要root权限<blockquote>
+<p>sudo su</p>
+</blockquote>
+</li>
+<li><p>写入如下内容(icon后面有空格,不会显示图片)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Encoding=UTF-8</span><br><span class="line">Name=AndroidStudio</span><br><span class="line">Comment=AndroidStudio</span><br><span class="line">Exec=/home/yangztel/software/androidstudio/bin/studio.sh</span><br><span class="line">Icon=/home/yangztel/software/androidstudio/bin/studio.png</span><br><span class="line">Terminal=false  </span><br><span class="line">Type=Application</span><br><span class="line">Categories==Application;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>可以讲文件复制到桌面</p>
+</li>
+</ul>
+<h1 id="使用SVN客服端"><a href="#使用SVN客服端" class="headerlink" title="使用SVN客服端"></a>使用SVN客服端</h1><ul>
+<li>安装<blockquote>
+<p>sudo apt-get install subversion</p>
+</blockquote>
+</li>
+<li>checkout,在想要check的目录下打开终端<blockquote>
+<p>svn co {svn repository url}</p>
+</blockquote>
+</li>
+<li>提交<blockquote>
+<p>svn commit -m path-to-commit，其中path-to-commit可以为空，成功后会提示更新后的版本号</p>
+</blockquote>
+</li>
+<li>更新<blockquote>
+<p>svn update</p>
+</blockquote>
+</li>
+<li>日志<blockquote>
+<p>svn log path</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="安装AppImage软件"><a href="#安装AppImage软件" class="headerlink" title="安装AppImage软件"></a>安装AppImage软件</h1><ul>
+<li>添加执行权限<blockquote>
+<p>chmod a+x *.AppImage</p>
+</blockquote>
+</li>
+<li>执行它<blockquote>
+<p>./*.AppImage</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="切换用户"><a href="#切换用户" class="headerlink" title="切换用户"></a>切换用户</h1><blockquote>
+<p>sudo su</p>
+</blockquote>
+<h1 id="查找当前目录下包含”git”的文本"><a href="#查找当前目录下包含”git”的文本" class="headerlink" title="查找当前目录下包含”git”的文本"></a>查找当前目录下包含”git”的文本</h1><blockquote>
+<p>grep -rn “git”</p>
+</blockquote>
+<ul>
+<li><p>*表示当前目录所有文件，也可以是某个文件名</p>
+</li>
+<li><p>-r 是递归查找</p>
+</li>
+<li>-n 是显示行号</li>
+<li>-R 查找所有文件包含子目录</li>
+<li>-i 忽略大小写</li>
+</ul>
+
+      
+    </div>
+
     
       
-        
-        
-
-        
       
 
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            08-06
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/08/06/hexo/" class="archive-post-link">
-            hexo
-          </a>
-        </span>
-      </div>
+
+
+      
+      
     
-      
-        
-        
 
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            08-06
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/08/06/git使用/" class="archive-post-link">
-            git使用
-          </a>
-        </span>
-      </div>
     
-      
+      <footer class="post-footer">
         
         
-
         
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            08-06
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/08/06/鸟哥的linux私房菜笔记-1/" class="archive-post-link">
-            鸟哥的linux私房菜笔记-1
-          </a>
-        </span>
-      </div>
+  <nav class="post-nav">
     
-  </section>
-
-  
-  <nav class="pagination">
     
+      <a class="next" href="/2018/08/06/hexo/">
+        <span class="next-text nav-default">hexo</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
     
   </nav>
 
+      </footer>
+    
+
+  </article>
 
 
           </div>
@@ -266,6 +288,11 @@
     </div>
 
     
+  
+  
+
+  
+
 
 
     

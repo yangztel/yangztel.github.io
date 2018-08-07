@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="git使用"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Hexo">
+
+
+
+
+
+
+<link rel="canonical" href="http://yoursite.com/2018/08/06/git使用/"/>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=" />
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+<script>
+  window.config = {"title":"Hexo","subtitle":null,"description":null,"author":"yangzteL","language":null,"timezone":null,"url":"http://yoursite.com","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null,"first_line_number":"always1"},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":"even","deploy":{"type":"git","repo":"https://gitee.com/yangztel/blog.git","branch":"master"},"ignore":[],"keywords":null,"index_generator":{"per_page":10,"order_by":"-date","path":""},"jsonContent":{"meta":false,"pages":false,"posts":{"title":true,"date":true,"path":true,"text":false,"raw":false,"content":false,"slug":false,"updated":false,"comments":false,"link":false,"permalink":false,"excerpt":false,"categories":false,"tags":true}},"category_generator":{"per_page":10},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"tag_generator":{"per_page":10},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true}};
+</script>
+
+    <title> git使用 - Hexo </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">Hexo</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">Hexo</a>
+</div>
+
+<nav class="site-navbar">
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          git使用
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-08-06
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+
+    <div class="post-content">
+      
+        <p>git使用<br><a id="more"></a></p>
+<ul>
+<li>&lt;&gt;:可选参数</li>
+<li>git 退出编辑模式：q</li>
+<li>terminal 清屏:cls</li>
+</ul>
+<h1 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h1><p>–global</p>
+<ul>
+<li>安装git后需要做如下全局配置</li>
+</ul>
+<blockquote>
+<p>git config –global user.name “Your Name”<br>git config –global user.email “<a href="mailto:email@example.com" target="_blank" rel="noopener">email@example.com</a>“</p>
+</blockquote>
+<p>用户名和邮箱地址的作用:</p>
+<p>用户名和邮箱地址是本地git客户端的一个变量，不随git库而改变。</p>
+<p>每次commit都会用用户名和邮箱纪录。</p>
+<p>github的contributions统计就是按邮箱来统计的。</p>
+<p>查看用户名和邮箱地址：</p>
+<blockquote>
+<p>git config user.name</p>
+</blockquote>
+<blockquote>
+<p>git config user.email</p>
+</blockquote>
+<p>修改用户名和邮箱地址：</p>
+<blockquote>
+<p>git config –global user.name “username”</p>
+</blockquote>
+<blockquote>
+<p>git config –global user.email “email”</p>
+</blockquote>
+<h1 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h1><ul>
+<li>创建仓库<blockquote>
+<p>git init</p>
+</blockquote>
+</li>
+<li>添加文件到仓库<blockquote>
+<p>git add [文件名]</p>
+</blockquote>
+</li>
+<li>添加所有文件<blockquote>
+<p>git add .</p>
+</blockquote>
+</li>
+<li>提交到仓库<br>git commit -m [提交说明]</li>
+</ul>
+<h1 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h1><ul>
+<li>查看版本状态<blockquote>
+<p>git status</p>
+</blockquote>
+</li>
+<li>查看具体文件改动<blockquote>
+<p>git diff [文件]</p>
+</blockquote>
+</li>
+<li><p>查看提交记录</p>
+<blockquote>
+<p>git log &lt;文件&gt; &lt;–pretty=oneline&gt;</p>
+</blockquote>
+</li>
+<li><p>版本回退(版本号可以只写部分)</p>
+<blockquote>
+<p> git reset –hard [版本号]</p>
+</blockquote>
+</li>
+<li><p>git命令记录(可以用来确定回退的版本号)</p>
+<blockquote>
+<p>git reflog</p>
+</blockquote>
+</li>
+<li><p>撤销工作区修改(命令中的–很重要，没有–，就变成了“切换到另一个分支”的命令)</p>
+<blockquote>
+<p>git checkout – readme.txt</p>
+</blockquote>
+</li>
+<li><p>撤销暂存区修改</p>
+<blockquote>
+<p>git reset HEAD <file></file></p>
+</blockquote>
+</li>
+<li><p>删除版本库文件</p>
+<blockquote>
+<p>git rm <file><br>git commit</file></p>
+</blockquote>
+</li>
+</ul>
+<h1 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h1><ul>
+<li>添加远程仓库<blockquote>
+<p>git remote add origin <a href="https://github.com/sicheng1991/giten.git" target="_blank" rel="noopener">https://github.com/sicheng1991/giten.git</a></p>
+</blockquote>
+</li>
+<li>提交<blockquote>
+<p>git push -u origin master</p>
+</blockquote>
+</li>
+<li><p>远程仓库保存密码</p>
+<blockquote>
+<p>git config credential.helper store</p>
+</blockquote>
+</li>
+<li><p>查看远程分支</p>
+<blockquote>
+<p>git remote -a</p>
+</blockquote>
+</li>
+<li>查看远程分支详细信息<blockquote>
+<p>git remote -v</p>
+</blockquote>
+</li>
+<li>推送分支<blockquote>
+<p>git push origin [分支名]</p>
+</blockquote>
+</li>
+<li>远程仓库克隆<blockquote>
+<p>git clone <a href="https://github.com/sicheng1991/giten.git" target="_blank" rel="noopener">https://github.com/sicheng1991/giten.git</a></p>
+</blockquote>
+</li>
+</ul>
+<h1 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h1><ul>
+<li>迁出分支<blockquote>
+<p>git checkout -b [分支名]</p>
+</blockquote>
+</li>
+<li>查看分支<blockquote>
+<p>git branch</p>
+</blockquote>
+</li>
+<li>切回分支<blockquote>
+<p>git checkout [分支名]</p>
+</blockquote>
+</li>
+<li>分支对比<blockquote>
+<p>git diff [分支1] [分支2]</p>
+</blockquote>
+</li>
+<li><p>合并分支</p>
+<blockquote>
+<p>git merge dev</p>
+</blockquote>
+<p>注：合并分支时，加上–no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。</p>
+<blockquote>
+<p>git merge –no-ff -m “merge with no-ff” dev</p>
+</blockquote>
+</li>
+<li><p>删除分支</p>
+<blockquote>
+<p>git branch -d dev</p>
+</blockquote>
+</li>
+<li>强制删除分支<blockquote>
+<p>git branch -D dev</p>
+</blockquote>
+</li>
+<li>查看版本合并图<blockquote>
+<p>git log –graph</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="工作区现场保留"><a href="#工作区现场保留" class="headerlink" title="工作区现场保留"></a>工作区现场保留</h1><p>保留当前工作区情况，以后可以进行恢复</p>
+<ul>
+<li>保留工作现场<blockquote>
+<p>git stash</p>
+</blockquote>
+</li>
+<li><p>查看工作去现场保存列表</p>
+<blockquote>
+<p>git stash lisg</p>
+</blockquote>
+</li>
+<li><p>工作区恢复方式</p>
+<blockquote>
+<p>git stash pop</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h1><p>多人协作的工作模式通常是这样：</p>
+<p>首先，可以试图用git push origin <branch-name>推送自己的修改；</branch-name></p>
+<p>如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；</p>
+<p>如果合并有冲突，则解决冲突，并在本地提交；</p>
+<p>没有冲突或者解决掉冲突后，再用git push origin <branch-name>推送就能成功！</branch-name></p>
+<p>如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch –set-upstream-to <branch-name> origin/<branch-name>。</branch-name></branch-name></p>
+<h1 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h1><p>注意：标签总是和某个commit挂钩。如果这个commit既出现在master分支，又出现在dev分支，那么在这两个分支上都可以看到这个标签。</p>
+<ul>
+<li>查看标签<blockquote>
+<p>git tag</p>
+</blockquote>
+</li>
+<li>打标签(默认标签是打在最新提交的commit上的)<blockquote>
+<p>git tag [标签名] &lt;commit版本号&gt;<br>命令git tag -a <tagname> -m “blablabla…”可以指定标签信息；</tagname></p>
+</blockquote>
+</li>
+<li><p>查看标签详情</p>
+<blockquote>
+<p>git show [标签名]</p>
+</blockquote>
+</li>
+<li><p>删除标签</p>
+<blockquote>
+<p>tag -d [标签名]</p>
+</blockquote>
+</li>
+</ul>
+<p>因为创建的标签都只存储在本地，不会自动推送到远程</p>
+<ul>
+<li>远程推送标签<blockquote>
+<p>git push origin [标签名]</p>
+</blockquote>
+</li>
+<li>远程推送全部标签<blockquote>
+<p>git push origin –tags</p>
+</blockquote>
+</li>
+<li>删除远程v1.0标签<blockquote>
+<p>git push origin :refs/tags/v1.0</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="文件忽略"><a href="#文件忽略" class="headerlink" title="文件忽略"></a>文件忽略</h1><p>git工作区创建文件:.gitignore<br>下面是常用的AS开发忽略文件配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"># Built application files</span><br><span class="line">*.apk</span><br><span class="line">*.ap_</span><br><span class="line"></span><br><span class="line"># Files for the ART/Dalvik VM</span><br><span class="line">*.dex</span><br><span class="line"></span><br><span class="line"># Java class files</span><br><span class="line">*.class</span><br><span class="line"></span><br><span class="line"># Generated files</span><br><span class="line">bin/</span><br><span class="line">gen/</span><br><span class="line">out/</span><br><span class="line"></span><br><span class="line"># Gradle files</span><br><span class="line">.gradle/</span><br><span class="line">build/</span><br><span class="line"></span><br><span class="line"># Local configuration file (sdk path, etc)</span><br><span class="line">local.properties</span><br><span class="line"></span><br><span class="line"># Proguard folder generated by Eclipse</span><br><span class="line">proguard/</span><br><span class="line"></span><br><span class="line"># Log Files</span><br><span class="line">*.log</span><br><span class="line"></span><br><span class="line"># Android Studio Navigation editor temp files</span><br><span class="line">.navigation/</span><br><span class="line"></span><br><span class="line"># Android Studio captures folder</span><br><span class="line">captures/</span><br><span class="line"></span><br><span class="line"># IntelliJ</span><br><span class="line">*.iml</span><br><span class="line">.idea/</span><br><span class="line"></span><br><span class="line"># Keystore files</span><br><span class="line"># Uncomment the following line if you do not want to check your keystore files in.</span><br><span class="line">#*.jks</span><br><span class="line"></span><br><span class="line"># External native build folder generated in Android Studio 2.2 and later</span><br><span class="line">.externalNativeBuild</span><br><span class="line"></span><br><span class="line"># Google Services (e.g. APIs or Firebase)</span><br><span class="line">google-services.json</span><br><span class="line"></span><br><span class="line"># Freeline</span><br><span class="line">freeline.py</span><br><span class="line">freeline/</span><br><span class="line">freeline_project_description.json</span><br><span class="line">.DS_Store</span><br><span class="line">*.hprof</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2018/08/06/hexo/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">hexo</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/2018/08/06/鸟哥的linux私房菜笔记-1/">
+        <span class="next-text nav-default">鸟哥的linux私房菜笔记-1</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">yangzteL</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v="></script>
+
+  </body>
+</html>

@@ -17,6 +17,8 @@
 
 
 
+  <meta name="description" content="hexo"/>
+
 
 
 
@@ -36,7 +38,7 @@
 
 
 
-<link rel="canonical" href="http://yoursite.com/archives/2018/08/"/>
+<link rel="canonical" href="http://yoursite.com/2018/08/06/hexo/"/>
 
 
 
@@ -79,11 +81,7 @@
   window.config = {"title":"Hexo","subtitle":null,"description":null,"author":"yangzteL","language":null,"timezone":null,"url":"http://yoursite.com","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null,"first_line_number":"always1"},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":"even","deploy":{"type":"git","repo":"https://gitee.com/yangztel/blog.git","branch":"master"},"ignore":[],"keywords":null,"index_generator":{"per_page":10,"order_by":"-date","path":""},"jsonContent":{"meta":false,"pages":false,"posts":{"title":true,"date":true,"path":true,"text":false,"raw":false,"content":false,"slug":false,"updated":false,"comments":false,"link":false,"permalink":false,"excerpt":false,"categories":false,"tags":true}},"category_generator":{"per_page":10},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"tag_generator":{"per_page":10},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true}};
 </script>
 
-    <title>
-  
-    归档 - Hexo
-  
-</title>
+    <title> hexo - Hexo </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -119,111 +117,145 @@
           <div id="content" class="content">
             
   
-  <section id="archive" class="archive">
-    
-      
-        <div class="archive-title">
-          <span class="archive-post-counter">
-            目前共计 4 篇日志
-          </span>
-        </div>
-      
-    
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          hexo
+        
+      </h1>
 
-    
-      
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h2 class="archive-year">2018</h2>
-          </div>
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            08-06
-          
+      <div class="post-meta">
+        <span class="post-time">
+          2018-08-06
         </span>
-        <span class="archive-post-title">
-          <a href="/2018/08/06/Ubuntu/" class="archive-post-link">
-            Ubuntu
-          </a>
-        </span>
+        
+        
       </div>
+    </header>
+
+    
+    
+
+
+    <div class="post-content">
+      
+        <p>hexo<br><a id="more"></a></p>
+<h1 id="本地搭建"><a href="#本地搭建" class="headerlink" title="本地搭建"></a>本地搭建</h1><ul>
+<li>工具</li>
+</ul>
+<blockquote>
+<p> hexo 和 git Node.js</p>
+</blockquote>
+<h1 id="在需要阶段的地方插入该代码语句"><a href="#在需要阶段的地方插入该代码语句" class="headerlink" title="在需要阶段的地方插入该代码语句"></a>在需要阶段的地方插入该代码语句</h1><!--more-->
+<ul>
+<li><p>申请github账号</p>
+</li>
+<li><p>git 和Node.js 安装好后可运行 如下代码安装hexo</p>
+</li>
+</ul>
+<blockquote>
+<p>$ sudo npm install -g hexo</p>
+</blockquote>
+<ul>
+<li>先创建文件夹在执行如下操作 （文件夹右键：git bash here）</li>
+</ul>
+<blockquote>
+<p>$ hexo init</p>
+</blockquote>
+<ul>
+<li>生成静态页面</li>
+</ul>
+<blockquote>
+<p>$ hexo g</p>
+</blockquote>
+<ul>
+<li>本地启用服务</li>
+</ul>
+<blockquote>
+<p>$ hexo server -p 10015</p>
+</blockquote>
+<p>其中10015为端口（我自己电脑4000端口已被占用），提示启动成功，浏览器输入：<a href="http://localhost:10015/" target="_blank" rel="noopener">http://localhost:10015/</a> 就可看到原始页面。</p>
+<h1 id="github部署"><a href="#github部署" class="headerlink" title="github部署"></a>github部署</h1><ul>
+<li><p>github 上建立远程仓库：自己用户名.github.io，如：sicheng1991.github.io</p>
+</li>
+<li><p>在config.yml根目录下的 config.yml文件中修改如下(注意冒号后面要有空格)：</p>
+<blockquote>
+<p>deploy: </p>
+<p>type: git   </p>
+<p>repository:&lt;<a href="https://github.com/sicheng1991/sicheng1991.github.io.git" target="_blank" rel="noopener">https://github.com/sicheng1991/sicheng1991.github.io.git</a> </p>
+<p>branch: master</p>
+</blockquote>
+</li>
+<li><p>执行命令将项目部署到github</p>
+<blockquote>
+<p>npm install hexo-deployer-git –save</p>
+</blockquote>
+</li>
+<li><p>执行命令部署</p>
+<blockquote>
+<p>hexo deploy</p>
+</blockquote>
+<p>浏览器打开 <a href="http://sicheng1991.github.io/" target="_blank" rel="noopener">http://sicheng1991.github.io/</a></p>
+<p>如修改了东西如下操作,来重新部署</p>
+<blockquote>
+<p>hexo clean<br>hexo generate<br>hexo deploy</p>
+</blockquote>
+<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><blockquote>
+<p>hexo new “postName” #新建文章   </p>
+<p>hexo new page “pageName” #新建页面 </p>
+<p>hexo generate #生成静态页面至public目录 </p>
+<p>hexo server -p 4000 #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）</p>
+<p> hexo deploy #将.deploy目录部署到GitHub </p>
+<p>hexo help #查看帮助 </p>
+<p>hexo version #查看Hexo的版本</p>
+</blockquote>
+</li>
+</ul>
+<p>  hexo主题：<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">地址</a> 使用： 下载主题，解压后放在，themes文件夹下，再根目录下的_config.yml中将主题改未自己的主题目录，如：theme: moretwo</p>
+<h1 id="主题"><a href="#主题" class="headerlink" title="主题 :"></a>主题 :</h1><ul>
+<li><a href="https://github.com/ahonn/hexo-theme-even/wiki" target="_blank" rel="noopener">event</a></li>
+</ul>
+
+      
+    </div>
+
     
       
-        
-        
-
-        
       
 
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            08-06
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/08/06/hexo/" class="archive-post-link">
-            hexo
-          </a>
-        </span>
-      </div>
+
+
+      
+      
     
-      
-        
-        
 
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            08-06
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/08/06/git使用/" class="archive-post-link">
-            git使用
-          </a>
-        </span>
-      </div>
     
-      
+      <footer class="post-footer">
         
         
-
         
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            08-06
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/08/06/鸟哥的linux私房菜笔记-1/" class="archive-post-link">
-            鸟哥的linux私房菜笔记-1
-          </a>
-        </span>
-      </div>
+  <nav class="post-nav">
     
-  </section>
-
-  
-  <nav class="pagination">
+      <a class="prev" href="/2018/08/06/Ubuntu/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">Ubuntu</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
     
+    
+      <a class="next" href="/2018/08/06/git使用/">
+        <span class="next-text nav-default">git使用</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
     
   </nav>
 
+      </footer>
+    
+
+  </article>
 
 
           </div>
@@ -266,6 +298,11 @@
     </div>
 
     
+  
+  
+
+  
+
 
 
     
